@@ -503,7 +503,7 @@ function readTagExp(xmlData,i, removeNSPrefix, closingChar = ">"){
   let attrExpPresent = true;
   if(separatorIndex !== -1){//separate tag name and attributes expression
     tagName = tagExp.substring(0, separatorIndex);
-    tagExp = tagExp.substring(separatorIndex + 1).trimStart();
+    tagExp = tagExp.substring(separatorIndex + 1) ?? ''.trimStart();
   }
 
   const rawTagName = tagName;

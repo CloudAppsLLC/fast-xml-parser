@@ -96,7 +96,7 @@ function registerEntity(parser){
       }
     }else if(ch === " " || ch === "\t"){
       if(!name){
-        name = text.trimStart();
+        name = text ?? ''.trimStart();
         text = "";
       }
     }else if (ch === '"' || ch === "'") {//start of attrBoundary
